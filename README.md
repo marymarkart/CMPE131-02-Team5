@@ -1,5 +1,5 @@
 # Team-Five-Project
-Adrien Carrou
-Kevin Campbell
-Rishi Jagtap
+Adrien Carrou <br/>
+Kevin Campbell <br/>
+Rishi Jagtap <br/>
 Faith Deanon
