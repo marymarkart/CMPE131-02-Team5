@@ -1,23 +1,21 @@
-## <remove all of the example text and notes in < > such as this one>
-
 ## Functional Requirements
 
-1. requirement
-2. requirement
-3. requirement
-4. requirement
-5. requirement
-6. requirement
-7. requirement
-8. requirement
-9. requirement
-10. requirement
-11. requirement
-12. requirement
+1. Login 
+2. Logout
+3. Create new account
+4. Delete account
+5. Add to cart
+6. Find items
+7. Splash page
+8. User profiles
+9. Buy items
+10. Add pictures for items
+11. See all items
+12. Add item to store
 
 ## Non-functional Requirements
 
-1. non-functional
+1. UI iteractive interface
 2. non-functional
 3. non-functional
 4. non-functional
