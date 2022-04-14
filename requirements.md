@@ -2,18 +2,18 @@
 
 ## Functional Requirements
 
-1. requirement
-2. requirement
-3. requirement
-4. requirement
-5. requirement
-6. requirement
-7. requirement
-8. requirement
-9. requirement
-10. requirement
-11. requirement
-12. requirement
+1. Login
+2. Logout
+3. Create New Account
+4. Delete Account
+5. Add to Cart
+6. Buy item
+7. Sellers can add items to their store
+8. See all available items in Seller's store
+9. User Profile
+10. Splash page
+11. Adds picture for items
+12. User Ratings 
 
 ## Non-functional Requirements
 
