@@ -16,42 +16,126 @@
 ## Non-functional Requirements
 
 1. UI iteractive interface
-2. non-functional
-3. non-functional
-4. non-functional
+2. Expected to work on Chrome
+3. Currency conversion support
+4. Choice of order for listing items (Alphabetical, price, etc.)
 
 ## Use Cases
 
-1. Use Case Name (Should match functional requirement name)
-- **Pre-condition:** <can be a list or short description> Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+1. Add to cart
+- **Pre-condition:** Item exists and is in stock on the cite.
 
-- **Trigger:** <can be a list or short description> Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. 
+- **Trigger:** User clicks on the "add to cart" button. 
 
 - **Primary Sequence:**
   
-  1. Ut enim ad minim veniam, quis nostrum e
-  2. Et sequi incidunt 
-  3. Quis aute iure reprehenderit
-  4. ... 
-  5. ...
-  6. ...
-  7. ...
-  8. ...
-  9. ...
-  10. <Try to stick to a max of 10 steps>
+  1. User clicks on an item of interest
+  2. Clicks the "add to cart" button
+  3. Item gets added to the user's shopping cart
 
-- **Primary Postconditions:** <can be a list or short description> 
+- **Primary Postconditions:** Displays a popup window that asks if the user wishes to continue shopping or go to checkout
 
-- **Alternate Sequence:** <you can have more than one alternate sequence to describe multiple issues that may arise>
+- **Alternate Sequence:** 
   
-  1. Ut enim ad minim veniam, quis nostrum e
-  2. Ut enim ad minim veniam, quis nostrum e
-  3. ...
+  1. User clicks "add to cart"
+  2. Popup displays text saying the item selected is not in stock.
+  3. Does not add anything to cart
+  4. Returns to item page
 
-- **Alternate Sequence <optional>:** <you can have more than one alternate sequence to describe multiple issues that may arise>
+2. Find item
+- **Pre-Condition:** Items exist in the store and are properly tagged.
   
-  1. Ut enim ad minim veniam, quis nostrum e
-  2. Ut enim ad minim veniam, quis nostrum e
-  3. ...
-2. Use Case Name (Should match functional requirement name)
-   ...
+- **Trigger:** User clicks the search button.
+  
+- **Primary Sequence:** 
+  
+  1. User types into the search bar
+  2. The search button is clicked
+  
+- **Primary Postconditions:** Returns the page of the item the user searched for
+  
+- **Alternate Sequence:** 
+  
+  1. User clicks off of the search bar
+  2. Search bar returns to it's previous orientation, minimized
+
+- **Alternate Sequence:**
+
+  1. Searches the database for item but returns nothing
+  2. Displays a screen saying the item the user searched for doesn't exist
+
+3. Add item to store
+- **Pre-Condition:** User has a profile
+  
+- **Trigger:** Clicks the "post new item" button.
+  
+- **Primary Sequence:** 
+
+  1. User fills out: name, price, description, and tags for the item (required fields)
+  2. Presses the "Post" button
+  
+- **Primary Postconditions:** Item gets posted on the cite and listed under the poster's profile
+  
+- **Alternate Sequence:** 
+
+  1. User does not fill out all required fields when trying to post the item
+  2. Popup indicates that the user still has fields to fill out
+  3. Returns to the post new item screen
+  
+4. Buy items
+- **Pre-Condition:** User has a profile and items exist in shopping cart.
+  
+- **Trigger:** User clicks on "Checkout" and proceeds to click "Buy".
+  
+- **Primary Sequence:** 
+  
+  1. User goes to the review shopping cart list page
+  2. User buys all items in the shopping cart
+  3. Goes to a screen confirming your purchase
+
+- **Primary Postconditions:** All items in the shopping cart are purchased and deducted from the shop.
+  
+- **Alternate Sequence:**
+  
+  1. User clicks "cancel"
+  2. Returns to the previous page
+
+- **Alternate Sequence:**
+
+  1. Card gets declined
+  2. Asks user to entire a valid credit card (in this case a card that has a cash amount greater than or equal to the amount of cash needed)
+
+5. Add pictures for items
+- **Pre-Condition:** Item exists and the user posted said item.
+  
+- **Trigger:** User clicks the option to upload an image for a specific post.
+  
+- **Primary Sequence:** 
+  
+  1. User selects the upload picture for an item they've posted
+  2. Changes are saved for the item
+  3. Returns to the item's options page, now displaying the image for the item
+
+- **Primary Postconditions:** Picture gets uploaded and 'attatched' to the item
+  
+- **Alternate Sequence:** 
+
+  1. User cancels the upload
+  2. Returns to the item's options screen
+  
+6. See all items
+- **Pre-Condition:** Items exist and are in stock in the database.
+  
+- **Trigger:** User clicks the "View all" button.
+  
+- **Primary Sequence:** 
+
+  1. "View all" is selected
+  2. Returns the catalog for all items in the database in a grid pattern
+  
+- **Primary Postconditions:** A page displaying a limited amount of the database at a time is returned
+  
+- **Alternate Sequence:** 
+  
+  1. Nothing is in the database
+  2. Displays a message saying nothing is currently listed
