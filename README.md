@@ -1,5 +1,5 @@
 # Team-Five-Project
-Adrien Carrou <br/>
-Kevin Campbell <br/>
-Rishi Jagtap <br/>
-Faith Deanon
+-Adrien Carrou (@acarrou)<br/>
+-Kevin Campbell (@Zariphron)<br/>
+-Rishi Jagtap (@RishiJ12)<br/>
+-Faith Deanon (@afdeanon)
