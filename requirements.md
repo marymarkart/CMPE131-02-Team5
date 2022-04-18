@@ -105,23 +105,23 @@
   1. Card gets declined
   2. Asks user to entire a valid credit card (in this case a card that has a cash amount greater than or equal to the amount of cash needed)
 
-5. Add pictures for items
-- **Pre-Condition:** Item exists and the user posted said item.
+5. User Profiles
+- **Pre-Condition:** User profile exists
   
-- **Trigger:** User clicks the option to upload an image for a specific post.
+- **Trigger:** User clicks on "Account and Lists"
   
 - **Primary Sequence:** 
   
-  1. User selects the upload picture for an item they've posted
-  2. Changes are saved for the item
-  3. Returns to the item's options page, now displaying the image for the item
+  1. User selects "Manage your profiles"
+  2. User selects which profile they would like to view
 
-- **Primary Postconditions:** Picture gets uploaded and 'attatched' to the item
+- **Primary Postconditions:** User is redirected to a new page in which user details are shown
   
 - **Alternate Sequence:** 
 
-  1. User cancels the upload
-  2. Returns to the item's options screen
+  1. User selects which profile to edit
+  2. User is redirected to new page where user details can be edited
+  3. User is redirected back to profile viewer
   
 6. See all items
 - **Pre-Condition:** Items exist and are in stock in the database.
