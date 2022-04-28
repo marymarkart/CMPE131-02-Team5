@@ -5,6 +5,8 @@
 3. Create new account
 4. Delete account
 5. Add to cart
+
+=======
 6. Find items
 7. Splash page
 8. User profiles
@@ -12,6 +14,7 @@
 10. Add pictures for items
 11. See all items
 12. Add item to store
+
 
 ## Non-functional Requirements
 
@@ -105,6 +108,8 @@
   1. Card gets declined
   2. Asks user to entire a valid credit card (in this case a card that has a cash amount greater than or equal to the amount of cash needed)
 
+
+=======
 5. User Profiles
 - **Pre-Condition:** User profile exists
   
@@ -138,4 +143,6 @@
 - **Alternate Sequence:** 
   
   1. Nothing is in the database
+
+=======
   2. Displays a message saying nothing is currently listed
