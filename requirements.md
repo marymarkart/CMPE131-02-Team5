@@ -5,8 +5,6 @@
 3. Create new account
 4. Delete account
 5. Add to cart
-
-=======
 6. Find items
 7. Splash page
 8. User profiles
