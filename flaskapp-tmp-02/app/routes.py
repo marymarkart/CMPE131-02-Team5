@@ -1,5 +1,5 @@
 from app import myapp_obj
-from flask import render_template, flash
+from flask import Flask, render_template, flash
 
 from flask_login import current_user
 from flask_login import login_user
@@ -10,7 +10,7 @@ from flask_login import login_required
 @login_required
 @myapp_obj.route('/')
 def home():
-    return 'home'
+    return render_template('splash.html')
 
 @myapp_obj.route('/login')
 def login():
@@ -20,5 +20,9 @@ def login():
     #     check username & password matches the one in db
     #     if true
     # user = User.query.filter_by(....)
-    login_user(user)
+    #login_user(user)
+    return render_template('login.html')
 
+@myapp_obj.route('/signup')
+def signup():
+    return render_template('signup.html')
