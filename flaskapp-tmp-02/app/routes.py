@@ -25,4 +25,6 @@ def login():
 
 @myapp_obj.route('/signup')
 def signup():
+    # username = request.form['username']
+    # password = request.form['password']
     return render_template('signup.html')

@@ -1,10 +1,23 @@
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/splash.css') }}">
         <title>Sign up</title>
     </head>
     <body>
-        <h1 text-align="center">Sign up</h1>
+        <h1 text-align="center">Sign up:</h1>
+        <label for="pass">Username</label>
+        <input title="username" class="textbox"  </input>
+        </br>
+        <label for="pass">Password (8 characters minimum):</label>
+        <input title="password" class="textbox" minlength="8" required type="password" </input>
 
-        <a title="Go back" href="/">Cancel</a>
+        </br>
+        <label for="pass">Re-Enter Password:</label>
+        <input title="password" class="textbox" minlength="8" required type="password" </input>
+
+        <input type="submit" value="Sign up">
+
+        <input type="submit" value="Go Back" onclick="window.location.href='/'"> </input>
+
     </body>
 </html>
