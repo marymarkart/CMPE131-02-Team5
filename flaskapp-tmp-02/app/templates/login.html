@@ -1,10 +1,14 @@
-<html>
-    <head>
-        <title>Login</title>
-    </head>
-    <body>
-        <h1 text-align="center">Login</h1>
+{% extends "base.html" %}
 
-        <a title="Go back" href="/">Cancel</a>
-    </body>
-</html>
+{% block content %}
+	<h3 class="title">Login</h3>
+	<form method="POST" action="/login">
+	<div class="login">
+		<label for="email">Email:</label>
+		<input type="email" class="login" id="email" placeholder="Enter email" name="email">
+		
+		<label for="password">Password:</label>
+		<input type = "password" class"login" id = "password" placeholder = "Enter Password" name = "password">
+		<button class="button" title="Log In" href="/login">Create Account</button>
+	</div>
+{% endblock %}
