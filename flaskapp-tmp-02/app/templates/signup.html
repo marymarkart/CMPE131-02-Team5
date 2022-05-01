@@ -1,23 +1,33 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/splash.css') }}">
-        <title>Sign up</title>
-    </head>
-    <body>
-        <h1 text-align="center">Sign up:</h1>
-        <label for="pass">Username</label>
-        <input title="username" class="textbox"  </input>
-        </br>
-        <label for="pass">Password (8 characters minimum):</label>
-        <input title="password" class="textbox" minlength="8" required type="password" </input>
 
-        </br>
-        <label for="pass">Re-Enter Password:</label>
-        <input title="password" class="textbox" minlength="8" required type="password" </input>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/splash.css') }}">
+    <title>Sign up</title>
+</head>
 
-        <input type="submit" value="Sign up">
+<body>
+    <h1 text-align="center">Sign up:</h1>
+    <label class="text" for="pass">Username</label>
+    </br>
 
-        <input type="submit" value="Go Back" onclick="window.location.href='/'"> </input>
+    <input title="username" class="textbox" </input>
+    </br>
 
-    </body>
+    <label class="text" for="pass">Password (8 characters minimum):</label>
+    </br>
+
+    <input title="password" class="textbox" minlength="8" required type="password" </input>
+    </br>
+
+    <label class="text" for="pass">Re-Enter Password:</label>
+    </br>
+
+    <input title="password" class="textbox" minlength="8" required type="password" </input>
+    </br>
+    
+    <button class="button" title="Sign up" href="/signup">Create Account</button>
+    <button class="button" title="Go Back" onclick="window.location.href='/'" href="/login">Back</button>
+
+</body>
+
 </html>

@@ -18,15 +18,26 @@ h1 {
 }
 
 .textbox {
-    width: 100%;
+    width: 10%;
     margin: 10px auto;
     padding: 10px;
-    text-align: center;
     border: 1px solid #850029;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.text {
+    width: 10%;
+    margin: 2px auto;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
     transition-duration: 0.5s;
 }
 
