@@ -1,33 +1,32 @@
-<html>
+{% extends "base.html" %}
 
-<head>
+{% block content %}
+<div class="column is-4 is-offset-4">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='/css/splash.css') }}">
-    <title>Sign up</title>
-</head>
+    <h1 class="title" text-align="center" >Sign Up</h1>
+    <div class="box">
+        <form method="POST" action="/signup">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
+                </div>
+            </div>
 
-<body>
-    <h1 text-align="center">Sign up:</h1>
-    <label class="text" for="pass">Username</label>
-    </br>
+            <div class="field">
+                <div class="control">
+                    <input class="input-is-large" type="text" name="name" placeholder="Name" autofocus="">
+                </div>
+            </div>
 
-    <input title="username" class="textbox" </input>
-    </br>
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Password">
+                </div>
+            </div>
 
-    <label class="text" for="pass">Password (8 characters minimum):</label>
-    </br>
-
-    <input title="password" class="textbox" minlength="8" required type="password" </input>
-    </br>
-
-    <label class="text" for="pass">Re-Enter Password:</label>
-    </br>
-
-    <input title="password" class="textbox" minlength="8" required type="password" </input>
-    </br>
-    
-    <button class="button" title="Sign up" href="/signup">Create Account</button>
-    <button class="button" title="Go Back" onclick="window.location.href='/'" href="/login">Back</button>
-
-</body>
-
-</html>
+            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+            <button class="button" onclick="window.location.href='/'" >Back</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
