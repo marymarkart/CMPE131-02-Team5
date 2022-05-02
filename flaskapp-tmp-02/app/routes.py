@@ -12,6 +12,17 @@ from flask_login import login_required
 def home():
     return render_template('splash.html')
 
+
+'''@login_manager.user_loader
+def user_loader(user_id):
+    """Given *user_id*, return the associated User object.
+
+    :param unicode user_id: user_id (email) user to retrieve
+
+    """
+    return User.query.get(user_id)'''
+
+
 @myapp_obj.route('/login')
 def login():
     # create a form
@@ -25,4 +36,6 @@ def login():
 
 @myapp_obj.route('/signup')
 def signup():
+    # username = request.form['username']
+    # password = request.form['password']
     return render_template('signup.html')
