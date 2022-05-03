@@ -1,5 +1,5 @@
 from app import myapp_obj
-from flask import Flask, render_template, flash, request
+from flask import Flask, render_template, flash
 
 from flask_login import current_user
 from flask_login import login_user
@@ -30,10 +30,7 @@ def login():
     # if input is valid
     #     check username & password matches the one in db
     #     if true
-    #email = request.form.get("email")
-    #password = request.form.get("password")
-    #user = User.query.filter_by(email=email).first()
-
+    # user = User.query.filter_by(....)
     #login_user(user)
     return render_template('login.html')
 
