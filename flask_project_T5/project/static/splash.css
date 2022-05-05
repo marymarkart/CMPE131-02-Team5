@@ -17,12 +17,46 @@ h1 {
     transition-duration: 0.5s;
 }
 
+.small-button {
+    background-color: #850029;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 16px;
+    width: 1%;
+    display: block;
+    transition-duration: 0.5s;
+}
+
 .field {
     width: 10%;
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #850029;
     border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.image {
+    margin: 2px auto;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition-duration: 0.5s;
+}
+
+.post-text {
+    width: 10%;
+    margin: 2px auto;
+    border-radius: 2px;
     text-align: center;
     text-decoration: none;
     font-size: 20px;

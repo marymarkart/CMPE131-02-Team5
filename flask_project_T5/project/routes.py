@@ -73,14 +73,14 @@ def save_profile_picture(form_picture):
 
     return picture_fn
 
-def save_item_picture(form_picture):
+def save_item_picture(form_item_picture):
     random_hex = secrets.token_hex(8)
-    _, f_ext = os.path.splitext(form_picture.filename)
+    _, f_ext = os.path.splitext(form_item_picture.data)
     picture_fn = random_hex + f_ext
     picture_path = os.path.join(app.root_path, 'static/item_pics', picture_fn)
 
     output_size = (125, 125)
-    i = Image.open(form_picture)
+    i = Image.open(form_item_picture)
     i.thumbnail(output_size)
     i.save(picture_path)
 
@@ -113,20 +113,13 @@ def account():
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        if form.item_picture.data:
-            picture_file = save_item_picture(form.item_picture.data)
-            current_user.item_image = picture_file
-            item_image = url_for('static', filename='item_pics/' + current_user.item_image)
-        else:
-            item_image = url_for('static', filename='item_pics/default.jpg/')
         post = Post(title=form.title.data, content=form.content.data, item_price = form.item_price.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
         return redirect(url_for('home'))
-    item_image = url_for('static', filename='item_pics/default.jpg/')
     return render_template('create_post.html', title='New Post',
-                            item_image=item_image, form=form, legend='New Post')
+                             form=form, legend='New Post')
 
 
 @app.route("/post/<int:post_id>")

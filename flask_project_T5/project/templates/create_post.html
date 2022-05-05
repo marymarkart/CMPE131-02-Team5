@@ -3,9 +3,9 @@
 <div class="content-section">
     <form method="POST" action="">
         {{ form.hidden_tag() }}
-        <fieldset class="form-group">
+        <fieldset class="text">
             
-            <legend class="border-bottom mb-4">{{ legend }}</legend>
+            <legend class="text">{{ legend }}</legend>
             <div class="form-group">
                 {{ form.title.label(class="form-control-label") }}
                 {% if form.title.errors %}
@@ -45,6 +45,7 @@
                     {{ form.item_price(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
+        </br>
             <div class="form-group">
                 {{ form.item_picture.label() }}
                 {{ form.item_picture(class="form-control-file") }}
@@ -55,7 +56,7 @@
                 {% endif %}
             </div>
         </fieldset>
-        <div class="form-group">
+        <div class="button">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
     </form>
