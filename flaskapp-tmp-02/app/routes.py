@@ -21,7 +21,16 @@ def logout():
 
 @myapp_obj.route('/login')
 def login():
-    return render_template('login.html')
+    # create a form
+    # validate form input
+    # if input is valid
+    #     check username & password matches the one in db
+    #     if true
+    #email = request.form.get("email")
+    #password = request.form.get("password")
+    #user = User.query.filter_by(email=email).first()
+
+    #login_user(user)
 
 @myapp_obj.route('/signup')
 def signup():
