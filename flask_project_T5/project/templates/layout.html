@@ -31,8 +31,8 @@
                 <a class="button" href="{{ url_for('account') }}">Account</a>
                 <a class="button" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
-                <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
-                <a class="nav-item nav-link" href="{{ url_for('register') }}">Signup</a>
+                <a class="button" href="{{ url_for('login') }}">Login</a>
+                <a class="button" href="{{ url_for('signup') }}">Signup</a>
               {% endif %}
             </div>
           </div>
