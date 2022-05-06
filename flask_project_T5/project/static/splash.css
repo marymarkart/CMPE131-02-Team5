@@ -2,6 +2,51 @@ h1 {
     text-align: center;
 }
 
+.defaultnavbar {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+.defaultnavbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+.defaultnavbar a.splash {
+    background-color: #850029;
+    color: white;
+}
+
+.defaultnavbar a.splash:hover {
+    background-color: white;
+    color: #850029;
+}
+
+.defaultnavbar a:hover {
+    background-color: white;
+    color: black;
+}
+
+.usernavbar {
+    float: right;
+}
+
+.usernavbar a.exit {
+    color: #ff0000;
+}
+
+.usernavbar a.exit:hover {
+    background-color: #cc0000;
+    color: white;
+}
+
 .button {
     background-color: #850029;
     color: white;

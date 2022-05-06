@@ -2,7 +2,7 @@
 {% block content %}
   <article class="media content-section">
     <img class="image" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-    </br>
+    <br>
     <img class="image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
     <div class="field">
       <div class="article-metadata">
