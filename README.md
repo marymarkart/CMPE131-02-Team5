@@ -1,6 +1,8 @@
 # Reebay
 ## Table of contents
 * [General info](#general-info)
+* [Features](#features)
+* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Run](#run-the-app)
@@ -8,6 +10,15 @@
 
 ## General info
 This project is a simple Ebay-like website where you can buy and sell items, create an account, delete your account, post items you'd like to sell, delete posts and update your account by name, email and profile picture.
+
+## Features
+List the ready features here:
+- Awesome feature 1
+- Awesome feature 2
+- Awesome feature 3
+
+## Screenshots
+![Example screenshot](./img/screenshot.png)
 	
 ## Technologies
 Project is created with:
