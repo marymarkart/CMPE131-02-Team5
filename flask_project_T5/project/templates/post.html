@@ -1,17 +1,11 @@
 {% extends "layout.html" %}
 {% block content %}
-<<<<<<< HEAD
   <article class="media body">
     <h2 style="text-align: center;">{{ post.title }}</h2>
     <div class="article-metadata">
       <a class="mr-2" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
       <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
     </div>
-=======
-  <article class="media content-section">
-    <img class="image" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
-    <br>
->>>>>>> ff899c3207be7b76fffa5e9f6c81f044998a4bf3
     <img class="image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
     <div class="field">
       <p class = "description">Description: </p>
