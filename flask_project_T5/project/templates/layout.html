@@ -16,28 +16,26 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-        <div class="container">
-          <a class="button" href="/">ReeBay</a>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="button" href="{{ url_for('home') }}">Home</a>
-              <a class="button" href="{{ url_for('about') }}">About</a>
+        <nav class="navbar">
+            <div class="collapse navbar-collapse" id="navbarToggle">
+                <div class="defaultnavbar">
+                    <a class="splash" href="/">ReeBay</a>
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                    <!-- Navbar Right Side -->
+                    <div class="usernavbar">
+                        {% if current_user.is_authenticated %}
+                        <a href="{{ url_for('new_post') }}">Sell</a>
+                        <a href="{{ url_for('account') }}">Account</a>
+                        <a class="exit" href="{{ url_for('logout') }}">Logout</a>
+                        {% else %}
+                        <a href="{{ url_for('login') }}">Login</a>
+                        <a href="{{ url_for('signup') }}">Signup</a>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-              {% if current_user.is_authenticated %}
-                <a class="button" href="{{ url_for('new_post') }}">Sell</a>
-                <a class="button" href="{{ url_for('account') }}">Account</a>
-                <a class="button" href="{{ url_for('logout') }}">Logout</a>
-              {% else %}
-                <a class="button" href="{{ url_for('login') }}">Login</a>
-                <a class="button" href="{{ url_for('signup') }}">Signup</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
     </header>
     <main role="main" class="container">
       <div class="row">
@@ -52,12 +50,6 @@
             {% endif %}
           {% endwith %}
           {% block content %}{% endblock %}
-        </div>
-        <div class="col-md-4">
-          <div class="content-section">
-              </ul>
-            </p>
-          </div>
         </div>
       </div>
     </main>
