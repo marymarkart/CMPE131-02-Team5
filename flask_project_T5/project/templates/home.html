@@ -9,8 +9,9 @@
               <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="button" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="post-text">{{ post.content }}</p>
           </div>
+          <p class = "description">Description: </p>
+          <p class="post-text">{{ post.content }}</p>
         </article>
     {% endfor %}
     {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
