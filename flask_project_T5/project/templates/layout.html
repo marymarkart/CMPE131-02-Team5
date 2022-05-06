@@ -18,25 +18,15 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
         <div class="container">
-          <a class="button" href="/">ReeBay</a>
-          <div class="collapse navbar-collapse" id="navbarToggle">
-            <div class="navbar-nav mr-auto">
-              <a class="button" href="{{ url_for('home') }}">Home</a>
-              <a class="button" href="{{ url_for('about') }}">About</a>
-            </div>
-            <!-- Navbar Right Side -->
-            <div class="navbar-nav">
-              {% if current_user.is_authenticated %}
-                <a class="button" href="{{ url_for('new_post') }}">Sell</a>
-                <a class="button" href="{{ url_for('account') }}">Account</a>
-                <a class="button" href="{{ url_for('logout') }}">Logout</a>
-              {% else %}
-                <a class="button" href="{{ url_for('login') }}">Login</a>
-                <a class="button" href="{{ url_for('signup') }}">Signup</a>
-              {% endif %}
-            </div>
-          </div>
+          <p>Reebay</p>
         </div>
+        <ul>
+          <li><a href: "">Home</li>
+          <li><a href: "">About</li>
+          <li><a href: "">Sell</li>
+          <li><a href: "">Account</li>
+          <li><a href: "">Logout</li>
+        </ul>
       </nav>
     </header>
     <main role="main" class="container">
