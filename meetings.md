@@ -13,7 +13,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on setting up the account and login pages in html
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -23,7 +23,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on implmenting flask into the website for the account method.
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -33,7 +33,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on settng up the database with the account and user information
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -43,7 +43,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on setting the database models
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -53,7 +53,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on Account creation, and profiles for user signup and database
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -63,7 +63,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on sell page creation and selling posts for users
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -73,7 +73,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on fixng the css for the website and showing the work I did to teammates.
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
@@ -83,7 +83,7 @@
 - Team updates
   - Kevin:
   - Faith:
-  - Adrien:
+  - Adrien: Worked on the delete account feature.
   - Rishi
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
