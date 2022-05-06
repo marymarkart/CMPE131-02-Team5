@@ -10,7 +10,7 @@
               <small class="post-text">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="button" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="post-text">{{ post.content }}</p>
+            <p class="post-text-user-post">{{ post.content }}</p>
           </div>
         </article>
     {% endfor %}

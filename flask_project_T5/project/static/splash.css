@@ -56,7 +56,9 @@ h1 {
     text-decoration: none;
     font-size: 20px;
     padding: 5px 16px;
-    width: 10%;
+    width: 100%;
+    max-width: 290px;
+    box-sizing: border-box;
     display: block;
     margin: 10px auto;
     transition-duration: 0.5s;
@@ -77,21 +79,17 @@ h1 {
 }
 
 .field {
-    width: 10%;
+    width: 18%;
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #850029;
     border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
     transition-duration: 0.5s;
 }
 
 .image {
-    margin: 2px auto;
-    border-radius: 2px;
+    margin: 1px auto;
+    border-radius: 1px;
     text-align: center;
     text-decoration: none;
     display: block;
@@ -99,14 +97,33 @@ h1 {
 }
 
 .post-text {
-    width: 10%;
+    width: 100%;
     margin: 2px auto;
     border-radius: 2px;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     transition-duration: 0.5s;
+}
+
+.description{
+    width: 100%;
+    margin: 2px auto;
+    border-radius: 2px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    text-decoration: underline;     
+    text-decoration-color: black;  
+}
+
+.userinfo{
+    align-items: center;
+    text-align: center;
 }
 
 .text {
