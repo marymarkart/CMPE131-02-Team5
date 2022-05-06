@@ -107,6 +107,19 @@ def account():
                            image_file=image_file, form=form)
 
 
+@app.route("/account/<int:user_id>/delete", methods=['GET','POST'])
+def delete_account(user_id):
+        try:
+            logout_user()
+            account = User.query.get_or_404(user_id)
+            db.session.delete(account)
+            db.session.commit()
+        except:
+            abort(404)
+        flash('Your account has been deleted!', 'success')
+        return redirect(url_for('home'))
+
+
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
 def new_post():
