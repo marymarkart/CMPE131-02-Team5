@@ -3,7 +3,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Run](run)
+* [Run](#run-the-app)
 * [Participants](#team-five-participants)
 
 ## General info
@@ -30,7 +30,7 @@ Or Run the bash script to install all dependencies:
 $ chmod +x dep.sh
 $ ./dep.sh
 ```
-## Run
+## Run-the-App
 ```
 $ cd flask_project_T5/
 $ python3 run.py
