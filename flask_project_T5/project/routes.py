@@ -112,7 +112,9 @@ def delete_account(user_id):
         try:
             logout_user()
             account = User.query.get_or_404(user_id)
+            posts = Post.query.get_or_404(user_id)
             db.session.delete(account)
+            db.session.delete(posts)
             db.session.commit()
         except:
             abort(404)
