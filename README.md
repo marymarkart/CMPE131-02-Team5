@@ -13,16 +13,26 @@ This project is a simple Ebay-like website where you can buy and sell items, cre
 
 ## Features
 List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+- Splash/Home/About Page
+- Sign Up
+- Log In
+- Logout
+- Delete Account
+- Create Post
+- Delete Post
+- User Profile
+- Update Description of Post
+- Update User Information
+- Update Profile Image
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+### Gantt Chart
+![image](https://user-images.githubusercontent.com/50222631/167236694-7def0c1d-29e5-4e09-85fb-2c226732aef9.png)
 	
 ## Technologies
 Project is created with:
 * Flask
+* Python
 * HTML
 * CSS
 	
@@ -48,7 +58,17 @@ $ python3 run.py
 ```
 
 ## Team-Five-Participants
--Adrien Carrou (@acarrou)<br/>
--Kevin Campbell (@Zariphron)<br/>
--Rishi Jagtap (@RishiJ12)<br/>
+-Adrien Carrou (@acarrou)
+* Worked on login, and create/delete account feature.
+
+
+-Kevin Campbell (@Zariphron)
+* Worked on splash page, and add Item feature. <br/>
+
+
+-Rishi Jagtap (@RishiJ12)
+* Worked on user profiles, and user update profile feature. <br/>
+
+
 -Faith Deanon (@afdeanon)
+* Worked on login, logout, and item images.

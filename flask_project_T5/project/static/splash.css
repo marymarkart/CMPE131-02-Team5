@@ -47,6 +47,13 @@ h1 {
     color: white;
 }
 
+.welcome {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
 .button {
     background-color: #850029;
     color: white;
