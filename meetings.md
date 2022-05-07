@@ -9,22 +9,22 @@
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
 
 ### 2022-04-21 at 13:30
-- Kevin, Faith, Adrien, Rishi
+- Kevin, Faith, Adrien
 - Team updates
   - Kevin: Worked on creating a splash page and css for the site
   - Faith: Updated requirements in our own branch
   - Adrien: Worked on setting up the account and login pages in html
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- Members started working on their respective tasks for the project.
 
 ### 2022-04-28 at 13:30
-- Kevin, Faith, Adrien, Rishi
+- Kevin, Faith, Adrien
 - Team updates
   - Kevin: Worked on the items layout and optional fields
   - Faith: Merged recent changed files from main to a new branch so I can edit it and work on the Log In page.
   - Adrien: Worked on implmenting flask into the website for the account method.
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- Members continue to work on their tasks, helping each other and researching what was needed for the website.
 
 ### 2022-04-30 at 13:30
 - Kevin, Faith, Adrien, Rishi
@@ -34,7 +34,7 @@
   - Adrien: Worked on settng up the database with the account and user information
   - Rishi: Researched methods to present user information from the database
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- All members were able to meet together and discuss how the database was going to be implemented for the website.
 
 ### 2022-05-03 at 13:30
 - Kevin, Faith, Adrien, Rishi
@@ -44,7 +44,7 @@
   - Adrien: Worked on setting the database models
   - Rishi: Researched ways to implement a carousel into webpage
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- All members met to make the website layout and researched the database get and post process
 
 ### 2022-05-03 at 20:00
 - Kevin, Faith, Adrien, Rishi
@@ -53,7 +53,7 @@
   - Faith: Reviewed and merged pull requests.
   - Adrien: Worked on Account creation, and profiles for user signup and database
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- Members put together the work done by each member to create the profile page and database for users.
 
 ### 2022-05-04 at 21:00
 - Kevin, Faith, Adrien, Rishi
@@ -63,7 +63,7 @@
   - Adrien: Worked on sell page creation and selling posts for users
   - Rishi: Worked on carousel for the home page
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- All members worked on making the website look better and implement the sell page feature.
 
 ### 2022-05-05 at 13:30
 - Kevin, Faith, Adrien, Rishi
@@ -73,7 +73,7 @@
   - Adrien: Worked on fixng the css for the website and showing the work I did to teammates.
   - Rishi : Finished Carousel for home page
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- All members worked on fixing bugs and making the display of the website look nicer.
 
 ### 2022-05-05 at 21:00
 - Kevin, Faith, Adrien, Rishi
@@ -83,4 +83,4 @@
   - Adrien: Worked on the delete account feature.
   - Rishi : Made changes to splash.css and some optimizations
 
-- Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
+- All members got together to discuss how to style certain parts of the website and the account delete feature
