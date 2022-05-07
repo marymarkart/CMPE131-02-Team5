@@ -67,7 +67,7 @@ $ python3 run.py
 
 
 -Rishi Jagtap (@RishiJ12)
-* Worked on user profiles, and user update profile feature. <br/>
+* Worked on Splash Page <br/>
 
 
 -Faith Deanon (@afdeanon)
