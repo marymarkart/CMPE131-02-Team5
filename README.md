@@ -71,4 +71,4 @@ $ python3 run.py
 
 
 -Faith Deanon (@afdeanon)
-* Worked on login, logout, and item images.
+* Worked on login, logout, CSS and layout of the website(home, posts, user page)
