@@ -4,7 +4,7 @@
 - Kevin, Faith
 - Team updates
   - Kevin: uploaded the meetings.md and requirements.md then worked on filling out the requirements file.
-  - Faith:
+  - Faith: Learned how to create my own branch, make pull requests, and solve conflicts.
 
 - Both members reviewed the examples for functional requirements and each made their own suggestions on seperate branches.
 
@@ -12,7 +12,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Updated requirements in our own branch
   - Adrien: Worked on setting up the account and login pages in html
   - Rishi
 
@@ -22,7 +22,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Merged recent changed files from main to a new branch so I can edit it and work on the Log In page.
   - Adrien: Worked on implmenting flask into the website for the account method.
   - Rishi
 
@@ -32,7 +32,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: UI for LogIn Page was completed
   - Adrien: Worked on settng up the database with the account and user information
   - Rishi
 
@@ -42,7 +42,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Fixed routes file to allow the home page to navigate to the LogIn page. 
   - Adrien: Worked on setting the database models
   - Rishi
 
@@ -52,7 +52,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Reviewed and merged pull requests.
   - Adrien: Worked on Account creation, and profiles for user signup and database
   - Rishi
 
@@ -62,7 +62,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Started to work on the CSS file to make the website look like an actual website.
   - Adrien: Worked on sell page creation and selling posts for users
   - Rishi
 
@@ -72,7 +72,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Started on the Navigation Bar of the splash page and worked on the CSS and layout of the home screen and posts screen.
   - Adrien: Worked on fixng the css for the website and showing the work I did to teammates.
   - Rishi
 
@@ -82,7 +82,7 @@
 - Kevin, Faith, Adrien, Rishi
 - Team updates
   - Kevin:
-  - Faith:
+  - Faith: Fixed some conflicts when merging my Faith-CSS branch. Finished the Project Planner gantt file. 
   - Adrien: Worked on the delete account feature.
   - Rishi
 
