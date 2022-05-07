@@ -11,7 +11,7 @@
 ### 2022-04-21 at 13:30
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Worked on creating a splash page and css for the site
   - Faith:
   - Adrien: Worked on setting up the account and login pages in html
   - Rishi
@@ -21,7 +21,7 @@
 ### 2022-04-28 at 13:30
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Worked on the items layout and optional fields
   - Faith:
   - Adrien: Worked on implmenting flask into the website for the account method.
   - Rishi
@@ -31,7 +31,7 @@
 ### 2022-04-30 at 13:30
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Researched methods to present info about items from the database
   - Faith:
   - Adrien: Worked on settng up the database with the account and user information
   - Rishi
@@ -41,7 +41,7 @@
 ### 2022-05-03 at 13:30
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Worked on item info page 
   - Faith:
   - Adrien: Worked on setting the database models
   - Rishi
@@ -51,7 +51,7 @@
 ### 2022-05-03 at 20:00
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Experimented on item page css
   - Faith:
   - Adrien: Worked on Account creation, and profiles for user signup and database
   - Rishi
@@ -61,7 +61,7 @@
 ### 2022-05-04 at 21:00
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Worked on displaying all items from the database
   - Faith:
   - Adrien: Worked on sell page creation and selling posts for users
   - Rishi
@@ -71,7 +71,7 @@
 ### 2022-05-05 at 13:30
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Worked on alternate item display page issues
   - Faith:
   - Adrien: Worked on fixng the css for the website and showing the work I did to teammates.
   - Rishi
@@ -81,7 +81,7 @@
 ### 2022-05-05 at 21:00
 - Kevin, Faith, Adrien, Rishi
 - Team updates
-  - Kevin:
+  - Kevin: Refined layout.html to be more asthetically pleasing and user friendly
   - Faith:
   - Adrien: Worked on the delete account feature.
   - Rishi
