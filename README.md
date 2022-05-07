@@ -28,6 +28,9 @@ List the ready features here:
 ## Screenshots
 ### Gantt Chart
 ![image](https://user-images.githubusercontent.com/50222631/167236694-7def0c1d-29e5-4e09-85fb-2c226732aef9.png)
+### Website Items Page
+<img width="1263" alt="image" src="https://user-images.githubusercontent.com/50222631/167240901-989c25c5-b2c1-49ef-8528-97bee9ea4ca0.png">
+
 	
 ## Technologies
 Project is created with:
