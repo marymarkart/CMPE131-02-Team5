@@ -150,6 +150,14 @@ h1 {
     color: #850029;
 }
 
+
+
+#welcome {
+        text-align: center;
+        color : white;
+}
+
+
 .carousel{
         width: 100%;
         height: 100vh;
@@ -157,7 +165,7 @@ h1 {
         background-size: cover;
         background-repeat: no-repeat;
         background-visibility: hidden;
-        animation: slideBg 8s linear infinite 10s;
+        animation: slideBg 25s linear infinite 10s;
         animation-timing-function: ease-in-out;
         background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
 }
