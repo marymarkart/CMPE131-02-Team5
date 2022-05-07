@@ -47,6 +47,13 @@ h1 {
     color: white;
 }
 
+.welcome {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+}
+
 .button {
     background-color: #850029;
     color: white;
@@ -149,7 +156,7 @@ h1 {
         background-size: cover;
         background-repeat: no-repeat;
         background-visibility: hidden;
-        animation: slideBg 8s linear infinite 0s;
+        animation: slideBg 45s linear infinite 5s;
         animation-timing-function: ease-in-out;
         background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
 }
