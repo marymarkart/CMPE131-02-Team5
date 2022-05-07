@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 <link rel = "stylesheet" href="static/splash.css">
 {% block content %}
-	<div class = "carousel">
+<div class = "carousel">
     {% for post in posts.items %}
         <article class="text">
           <img class="image" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
