@@ -142,6 +142,7 @@ h1 {
     font-size: 15px;
     display: block;
     transition-duration: 0.5s;
+    color: white;
 }
 
 .button:hover {
@@ -156,30 +157,29 @@ h1 {
         background-size: cover;
         background-repeat: no-repeat;
         background-visibility: hidden;
-        animation: slideBg 45s linear infinite 5s;
+        animation: slideBg 8s linear infinite 10s;
         animation-timing-function: ease-in-out;
-        background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+        background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
 }
 
 
 @keyframes slideBg  {
 
         0%{
-                background-image : url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
+                background-image : url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
         }
 
         25%
         {
-                background-image : url('https://media.istockphoto.com/photos/picturesque-morning-in-plitvice-national-park-colorful-spring-scene-picture-id1093110112?k=20&m=1093110112&s=612x612&w=0&h=3OhKOpvzOSJgwThQmGhshfOnZTvMExZX2R91jNNStBY=');
-        }
-
-        50%
-        {background-image : url('https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg');
+		background-image : url('https://img.freepik.com/free-photo/black-marble-patterned-texture-background-marble-thailand-abstract-natural-marble-black-white-design_1253-917.jpg?t=st=1651896641~exp=1651897241~hmac=63064ec88cca865af37d65c9c168eb4956d42c33dfdae5e3626a5a4ac313e7d9&w=1060');
+	}
+        50%{
+		background-image : url('https://img.freepik.com/free-vector/memphis-blue-background-with-halftone-line-elements_1017-33622.jpg?t=st=1651896004~exp=1651896604~hmac=6b17fede4b21cb46424d332e62a8d95be95ae17ced71ae275c5d3ca10921dfe1&w=1800');
 
         }
 
 	75%
         {
-                background-image : url('https://media.istockphoto.com/photos/hot-air-balloons-flying-over-the-botan-canyon-in-turkey-picture-id1297349747?b=1&k=20&m=1297349747&s=170667a&w=0&h=oH31fJty_4xWl_JQ4OIQWZKP8C6ji9Mz7L4XmEnbqRU=');
+		background-image : url('https://img.freepik.com/free-vector/gradient-luxury-background_23-2148999255.jpg?t=st=1651896004~exp=1651896604~hmac=44b3fbef9d17b7109f719c96e2994341f3a90405c4199b99ecc54da93f1b9153&w=1480');
         }
 }
