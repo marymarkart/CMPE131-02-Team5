@@ -142,7 +142,7 @@ h1 {
     font-size: 15px;
     display: block;
     transition-duration: 0.5s;
-    color: white;
+    color: black;
 }
 
 .button:hover {
