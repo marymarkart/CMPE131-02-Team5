@@ -6,11 +6,11 @@
           <img class="image" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
           <div class="media-body">
             <div class="article-metadata">
-              <a class="post-text" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-              <small class="post-text">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+              <a class="medium-button" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+              <small class="text">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="button" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="post-text-user-post">{{ post.content }}</p>
+            <p class="text">{{ post.content }}</p>
           </div>
         </article>
     {% endfor %}

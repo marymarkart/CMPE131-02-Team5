@@ -3,8 +3,9 @@
   <article class="media body">
     <h2 style="text-align: center;">{{ post.title }}</h2>
     <div class="article-metadata">
-      <a class="mr-2" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
-      <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text" text>User:</small>
+      <a class="medium-button" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+      <small class="text" text>Posted: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
     </div>
     <img class="image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
     <div class="field">
@@ -31,8 +32,8 @@
           <h5 class="text" id="deleteModalLabel">Delete Post?</h5>
         </div>
         <div class="modal-footer">
-          <form class='button' action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
-            <input class="btn btn-danger" type="submit" value="Delete">
+          <form action="{{ url_for('delete_post', post_id=post.id) }}" method="POST">
+            <input class="medium-button" type="submit" value="Delete">
           </form>
         </div>
       </div>

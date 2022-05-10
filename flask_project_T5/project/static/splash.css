@@ -48,10 +48,14 @@ h1 {
 }
 
 .welcome {
+    left: 0;
+    line-height: 200px;
+    margin-top: -100px;
+    position: absolute;
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: #fff;
+    color: white;
+    top: 50%;
+    width: 100%;
 }
 
 .button {
@@ -77,11 +81,32 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
     text-align: center;
+    position:relative;
+    bottom:0;
+    margin-top:33%;
     text-decoration: none;
     font-size: 20px;
     padding: 5px 16px;
     width: 1%;
     display: block;
+    transition-duration: 0.5s;
+}
+
+.medium-button{
+    background-color: #850029;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 5px 16px;
+    width: 100%;
+    max-width: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
     transition-duration: 0.5s;
 }
 
@@ -111,6 +136,7 @@ h1 {
     text-decoration: none;
     font-size: 15px;
     display: block;
+    color: white;
     transition-duration: 0.5s;
 }
 
@@ -142,7 +168,7 @@ h1 {
     font-size: 15px;
     display: block;
     transition-duration: 0.5s;
-    color: white;
+    color: black;
 }
 
 .button:hover {
