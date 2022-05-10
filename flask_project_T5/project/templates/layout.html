@@ -20,8 +20,9 @@
             <div class="collapse navbar-collapse" id="navbarToggle">
                 <div class="defaultnavbar">
                     <a class="splash" href="/">ReeBay</a>
-                    <a href="{{ url_for('posts') }}">Items</a>
                     <a href="{{ url_for('about') }}">About</a>
+                    <a href="{{ url_for('posts') }}">Items</a>
+                    <a href="{{ url_for('cart') }}">Cart</a>
                     <!-- Navbar Right Side -->
                     <div class="usernavbar">
                         {% if current_user.is_authenticated %}
