@@ -68,7 +68,7 @@ h1 {
     font-size: 20px;
     padding: 5px 16px;
     width: 100%;
-    max-width: 290px;
+    max-width: 200px;
     box-sizing: border-box;
     display: block;
     margin: 10px auto;
@@ -140,6 +140,7 @@ h1 {
     transition-duration: 0.5s;
 }
 
+
 .description{
     width: 100%;
     margin: 2px auto;
@@ -151,6 +152,17 @@ h1 {
     font-weight: bold;
     transition-duration: 0.5s;
     text-decoration: underline;     
+    text-decoration-color: black;  
+}
+
+.description-text{
+    width: 100%;
+    margin: 2px auto;
+    border-radius: 2px;
+    text-align: left;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.5s;     
     text-decoration-color: black;  
 }
 

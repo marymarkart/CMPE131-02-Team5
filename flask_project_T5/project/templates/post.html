@@ -10,10 +10,10 @@
     <img class="image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
     <div class="field">
       <p class = "description">Description: </p>
-      <p class="post-text">{{ post.content }}</p>
+      <p class="description-text">{{ post.content }}</p>
       <div class = "price-div">
         <p class="description">Price: </p>
-        <p class="post-text">${{  post.item_price }}</p>
+        <p class="description-text">${{  post.item_price }}</p>
       </div>
     </div>
   </article>
@@ -24,7 +24,9 @@
       </div>
     {% endif %}
   </div>
+  
   <!-- Modal -->
+  {% if post.author == current_user %}
   <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -39,4 +41,15 @@
       </div>
     </div>
   </div>
+{% endif %}
+
+{% if post.author != current_user %}
+      </div>
+      <div class="modal-footer">
+        <form action="{{ url_for('add_cart', post_id=post.id) }}" method="POST">
+          <input class="button" type="submit" value="Add to Cart">
+        </form>
+      </div>
+{% endif %}
+
 {% endblock content %}

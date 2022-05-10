@@ -23,6 +23,10 @@ def posts():
 def about():
     return render_template('about.html', title='About')
 
+@app.route("/cart")
+def cart():
+    return render_template('cart.html', title='Cart')
+
 
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
@@ -176,6 +180,14 @@ def delete_post(post_id):
     db.session.commit()
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
+
+@app.route("/post/<int:post_id>/add-to-cart", methods=['POST'])
+@login_required
+def add_cart(post_id):
+
+
+    flash('Added Item to Cart!', 'success')
+    return redirect(url_for('cart'))
 
 
 @app.route("/user/<string:username>")
