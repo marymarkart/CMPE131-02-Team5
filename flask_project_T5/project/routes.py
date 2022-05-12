@@ -78,14 +78,14 @@ def save_profile_picture(form_picture):
 
     return picture_fn
 
-def save_item_picture(form_item_picture):
+def save_item_picture(form_item_image):
     random_hex = secrets.token_hex(8)
-    _, f_ext = os.path.splitext(form_item_picture.data)
-    picture_fn = random_hex + f_ext
-    picture_path = os.path.join(app.root_path, 'static/item_pics', picture_fn)
+    _, f_ext = os.path.splitext(form_item_image.filename)
+    item_image_fn = random_hex + f_ext
+    picture_path = os.path.join(app.root_path, 'static/item_pics', item_image_fn)
 
     output_size = (125, 125)
-    i = Image.open(form_item_picture)
+    i = Image.open(form_item_image)
     i.thumbnail(output_size)
     i.save(picture_path)
 
@@ -138,10 +138,10 @@ def delete_account(user_id):
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        if form.item_picture.data:
-            picture_file = save_profile_picture(form.item_picture.data)
-            current_user.image_file = picture_file
-        post = Post(title=form.title.data, content=form.content.data, item_price = form.item_price.data, author=current_user)
+        picture_file = save_item_picture(form.item_image.data)
+        current_user.image_file = picture_file
+        db.session.commit()
+        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, item_image=current_user.image_file, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')

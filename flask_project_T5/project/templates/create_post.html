@@ -47,10 +47,10 @@
             </div>
         <br>
             <div class="form-group">
-                {{ form.item_picture.label() }}
-                {{ form.item_picture(class="form-control-file") }}
-                {% if form.item_picture.errors %}
-                    {% for error in form.item_picture.errors %}
+                {{ form.item_image.label() }}
+                {{ form.item_image(class="form-control-file") }}
+                {% if form.item_image.errors %}
+                    {% for error in form.item_image.errors %}
                         <span class="text-danger">{{ error }}</span><br>
                     {% endfor %}
                 {% endif %}
