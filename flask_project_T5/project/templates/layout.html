@@ -22,16 +22,17 @@
                     <a class="splash" href="/">ReeBay</a>
                     <a href="{{ url_for('about') }}">About</a>
                     <a href="{{ url_for('posts') }}">Items</a>
-                    <a href="{{ url_for('cart') }}">Cart</a>
                     <!-- Navbar Right Side -->
                     <div class="usernavbar">
                         {% if current_user.is_authenticated %}
                         <a href="{{ url_for('new_post') }}">Sell</a>
+                        <a href="{{ url_for('cart') }}">Cart</a>
                         <a href="{{ url_for('account') }}">Account</a>
                         <a class="exit" href="{{ url_for('logout') }}">Logout</a>
                         {% else %}
                         <a href="{{ url_for('login') }}">Login</a>
                         <a href="{{ url_for('signup') }}">Signup</a>
+                        
                         {% endif %}
                     </div>
                 </div>

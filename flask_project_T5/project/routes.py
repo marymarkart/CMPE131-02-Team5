@@ -24,6 +24,7 @@ def about():
     return render_template('about.html', title='About')
 
 @app.route("/cart")
+@login_required
 def cart():
     return render_template('cart.html', title='Cart')
 
