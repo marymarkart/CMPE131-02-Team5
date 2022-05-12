@@ -118,12 +118,17 @@ def delete_account(user_id):
         try:
             logout_user()
             account = User.query.get_or_404(user_id)
-            posts = Post.query.get_or_404(user_id)
+            while True:
+                post = Post.query.filter_by(user_id=user_id).first()
+                if post:
+                    db.session.delete(post)
+                    db.session.commit()
+                else:
+                    break
             db.session.delete(account)
-            db.session.delete(posts)
             db.session.commit()
         except:
-            abort(404)
+           abort(404)
         flash('Your account has been deleted!', 'success')
         return redirect(url_for('home'))
 
@@ -133,6 +138,9 @@ def delete_account(user_id):
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
+        if form.item_picture.data:
+            picture_file = save_profile_picture(form.item_picture.data)
+            current_user.image_file = picture_file
         post = Post(title=form.title.data, content=form.content.data, item_price = form.item_price.data, author=current_user)
         db.session.add(post)
         db.session.commit()
