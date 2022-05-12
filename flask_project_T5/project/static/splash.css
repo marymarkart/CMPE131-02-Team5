@@ -191,8 +191,8 @@ h1 {
 
 
 #welcome {
-        text-align: center;
-        color : white;
+    text-align: center;
+    color : white;
 }
 
 
@@ -208,6 +208,19 @@ h1 {
         background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
 }
 
+.whiteHeader{
+    text-align: center;
+    color : white;
+}
+
+.aboutText{
+    text-align: center;
+    color: white;
+    text-decoration-color: white;
+    font-size: 25px;
+    display: block;
+    transition-duration: 0.5s;
+}
 
 @keyframes slideBg  {
 
