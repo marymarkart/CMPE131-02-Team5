@@ -138,10 +138,11 @@ def delete_account(user_id):
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        picture_file = save_item_picture(form.item_image.data)
-        current_user.image_file = picture_file
-        db.session.commit()
-        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, item_image=current_user.image_file, author=current_user)
+        if form.item_image.data:
+            picture_file = save_item_picture(form.item_image.data)
+            current_user.image_file = picture_file
+            db.session.commit()
+        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
