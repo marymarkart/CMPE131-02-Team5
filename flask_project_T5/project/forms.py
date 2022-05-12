@@ -60,5 +60,5 @@ class PostForm(FlaskForm):
     title = StringField('Item Name', validators=[DataRequired()])
     content = TextAreaField('Description', validators=[DataRequired()])
     item_price = StringField('Item Price $', validators=[DataRequired()])
-    item_picture = FileField('Item Image', validators=[FileAllowed(['jpg', 'png'])])
+    item_image = FileField('Item Image', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Post')
