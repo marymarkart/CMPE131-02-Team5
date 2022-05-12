@@ -78,6 +78,17 @@ def save_profile_picture(form_picture):
 
     return picture_fn
 
+#create a function that saves a file image to the static folder
+def save_file(form_file):
+    random_hex = secrets.token_hex(8)
+    _, f_ext = os.path.splitext(form_file.filename)
+    file_fn = random_hex + f_ext
+    file_path = os.path.join(app.root_path, 'static/item_pics', file_fn)
+
+    form_file.save(file_path)
+
+    return file_fn
+
 def save_item_picture(form_item_image):
     random_hex = secrets.token_hex(8)
     _, f_ext = os.path.splitext(form_item_image.filename)
@@ -135,17 +146,17 @@ def delete_account(user_id):
 
 @app.route("/post/new", methods=['GET', 'POST'])
 @login_required
+#save the file image in the folder item_pics
 def new_post():
     form = PostForm()
     if form.validate_on_submit():
-        picture_file = save_item_picture(form.item_image.data)
-        current_user.image_file = picture_file
-        db.session.commit()
-        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, item_image=current_user.image_file, author=current_user)
+        picture_file = save_file(form.item_image.data)
+        image_file = picture_file
+        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, item_image=image_file, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
-        return redirect(url_for('home'))
+        return redirect(url_for('posts'))
     return render_template('create_post.html', title='New Post',
                              form=form, legend='New Post')
 
