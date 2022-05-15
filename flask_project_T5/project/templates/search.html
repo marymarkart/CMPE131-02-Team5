@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="carousel">
+    <h1 class="whiteHeader">Searched Items:</h1>
+    <p>{{ searched }}</p>
+    </br>
+    {% for post in posts %}
+    <a href="{{ url_for('post', id=post.id) }}">
+        <div class="card">
+            <img src="{{ post.item_image }}" alt="{{ post.title }}" style="width:100%">
+            <div class="container">
+                <h4><b>{{ post.title }}</b></h4>
+                <p>{{ post.content }}</p>
+                <p>{{ post.item_price }}</p>
+            </div>
+            </br>
+            {% endfor %}
+        </div>
+        {% endblock content %}

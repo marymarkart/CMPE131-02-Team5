@@ -3,7 +3,7 @@ import secrets
 from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
 from project import app, db, bcrypt
-from project.forms import (RegistrationForm, LoginForm, UpdateAccountForm, PostForm)
+from project.forms import (RegistrationForm, LoginForm, UpdateAccountForm, PostForm, SearchForm)
 from project.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
 
@@ -17,6 +17,21 @@ def posts():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
     return render_template('posts.html', posts=posts)
+
+@app.context_processor
+def base():
+    form = SearchForm()
+    return dict(form=form)
+
+@app.route('/search', methods=["Get", "POST"])
+def search():
+	form = SearchForm()
+	posts = Post.query
+	if form.validate_on_submit():
+		post.searched = form.searched.data
+		posts = posts.filter(Post.content.like('%' + post.searched + '%'))
+		posts = posts.order_by(Post.title).all()
+		return render_template("search.html", form=form, searched=post.searched, posts = posts)
 
 
 @app.route("/about")
@@ -32,7 +47,7 @@ def cart():
 @app.route("/signup", methods=['GET', 'POST'])
 def signup():
     if current_user.is_authenticated:
-        return redirect(url_for('home'))
+        return render_template('home.html')
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
@@ -40,21 +55,21 @@ def signup():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
-        return redirect(url_for('login'))
+        return render_template('login.html')
     return render_template('signup.html', title='Signup', form=form)
 
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect(url_for('home'))
+        return render_template('home.html')
     form = LoginForm()
     if form.validate_on_submit():
         user = User.query.filter_by(email=form.email.data).first()
         if user and bcrypt.check_password_hash(user.password, form.password.data):
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('home'))
+            return redirect(next_page) if next_page else render_template('home.html')
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
@@ -63,7 +78,7 @@ def login():
 @app.route("/logout")
 def logout():
     logout_user()
-    return redirect(url_for('home'))
+    return render_template('home.html')
 
 
 def save_profile_picture(form_picture):
@@ -105,7 +120,7 @@ def account():
         current_user.email = form.email.data
         db.session.commit()
         flash('Your account has been updated!', 'success')
-        return redirect(url_for('account'))
+        return render_template('account.html')
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
@@ -131,7 +146,7 @@ def delete_account(user_id):
         except:
            abort(404)
         flash('Your account has been deleted!', 'success')
-        return redirect(url_for('home'))
+        return render_template('home.html')
 
 
 @app.route("/post/new", methods=['GET', 'POST'])
@@ -147,7 +162,7 @@ def new_post():
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
-        return redirect(url_for('home'))
+        return render_template('home.html')
     return render_template('create_post.html', title='New Post',
                              form=form, legend='New Post')
 
@@ -171,7 +186,7 @@ def update_post(post_id):
         post.item_price = form.item_price.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
-        return redirect(url_for('post', post_id=post.id))
+        return render_template('post', post_id=post.id)
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
@@ -189,7 +204,7 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Your post has been deleted!', 'success')
-    return redirect(url_for('home'))
+    return render_template('home.html')
 
 @app.route("/post/<int:post_id>/add-to-cart", methods=['POST'])
 @login_required
@@ -197,7 +212,7 @@ def add_cart(post_id):
 
 
     flash('Added Item to Cart!', 'success')
-    return redirect(url_for('cart'))
+    return render_template('cart.html')
 
 
 @app.route("/user/<string:username>")
