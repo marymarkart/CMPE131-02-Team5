@@ -1,19 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="carousel">
-    <h1 class="whiteHeader">Searched Items:</h1>
-    <p>{{ searched }}</p>
+    <h1 class="whiteHeader">Searched Items For: "{{ searched }}"</h1>
     </br>
     {% for post in posts %}
-    <a href="{{ url_for('post', id=post.id) }}">
-        <div class="card">
-            <img src="{{ post.item_image }}" alt="{{ post.title }}" style="width:100%">
-            <div class="container">
-                <h4><b>{{ post.title }}</b></h4>
-                <p>{{ post.content }}</p>
-                <p>{{ post.item_price }}</p>
-            </div>
-            </br>
+
+            <article class="text">
+                <img class="image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                <div class="media-body">
+                  <div class="article-metadata">
+                    <a class="medium-button" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
+                    <small class="post-text">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+                  </div>
+                  <h2><a class="button" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                </div>
+                <p class = "post-text">Description: </p>
+                <p class="post-text">{{ post.content }}</p>
+              </article>
             {% endfor %}
-        </div>
         {% endblock content %}

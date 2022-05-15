@@ -23,7 +23,7 @@ def base():
     form = SearchForm()
     return dict(form=form)
 
-@app.route('/search', methods=["Get", "POST"])
+@app.route('/search', methods=["POST"])
 def search():
 	form = SearchForm()
 	posts = Post.query
@@ -55,7 +55,7 @@ def signup():
         db.session.add(user)
         db.session.commit()
         flash('Your account has been created! You are now able to log in', 'success')
-        return render_template('login.html')
+        return redirect(url_for('login'))
     return render_template('signup.html', title='Signup', form=form)
 
 

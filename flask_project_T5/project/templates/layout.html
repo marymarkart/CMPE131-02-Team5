@@ -24,16 +24,19 @@
                     <a href="{{ url_for('posts') }}">Items</a>
                     <!-- Navbar Right Side -->
                     <div class="usernavbar">
+                      
+                      <form method="POST" action="{{ url_for('search')}}" class="d-flex">
+                        {{ form.hidden_tag() }}
+                        <input class="form-control me-2" type="search" placeholder="Search Items" aria-label="Search" name="searched">
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                      </form>
+                      
                         {% if current_user.is_authenticated %}
                         <a href="{{ url_for('new_post') }}">Sell</a>
                         <a href="{{ url_for('cart') }}">Cart</a>
                         <a href="{{ url_for('account') }}">Account</a>
                         <a class="exit" href="{{ url_for('logout') }}">Logout</a>
                         {% else %}
-                    <form moethod="POST" class = "d-flex" action="{{ url_for('search') }}">
-                        <input class="search" type="text" placeholder="Search Item" name="search">
-                        <button>Search</button>
-                    </form>
                         <a href="{{ url_for('login') }}">Login</a>
                         <a href="{{ url_for('signup') }}">Signup</a>
                         
