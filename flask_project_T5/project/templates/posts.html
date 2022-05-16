@@ -4,7 +4,7 @@
         <div class="flex-container">
             {% for post in posts.items %}
             <article class="post">
-                <img class="image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                <img class="profile-image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
                 <div class="media-body">
                     <div class="article-metadata">
                         <a class="button" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
