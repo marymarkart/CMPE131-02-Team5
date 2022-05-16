@@ -17,16 +17,18 @@
             </article>
             {% endfor %}
         </div>
-    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-      {% if page_num %}
-        {% if posts.page == page_num %}
-          <a class="small-button" href="{{ url_for('posts', page=page_num) }}">{{ page_num }}</a>
-        {% else %}
-          <a class="small-button" href="{{ url_for('posts', page=page_num) }}">{{ page_num }}</a>
-        {% endif %}
-      {% else %}
-        ...
-      {% endif %}
-    {% endfor %}
+        <div class="flex-container">
+            {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+            {% if page_num %}
+            {% if posts.page == page_num %}
+            <a class="small-button" href="{{ url_for('posts', page=page_num) }}">{{ page_num }}</a>
+            {% else %}
+            <a class="small-button" href="{{ url_for('posts', page=page_num) }}">{{ page_num }}</a>
+            {% endif %}
+            {% else %}
+            ...
+            {% endif %}
+            {% endfor %}
+        </div>
     </div>
 {% endblock content %}

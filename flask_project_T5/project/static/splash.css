@@ -239,6 +239,10 @@ h1 {
     color: black;
 }
 
+.info-block {
+    margin-top: 10%;
+}
+
 .button:hover {
     background-color: white;
     color: #850029;
