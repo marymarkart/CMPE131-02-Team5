@@ -3,8 +3,10 @@
 <div class="carousel">
     <h1 class="whiteHeader">Searched Items For: "{{ searched }}"</h1>
     </br>
+    {% if not posts %}
+        <h3 class="whiteHeader" >No posts found.</h3>
+    {% else %}
     {% for post in posts %}
-
             <article class="text">
                 <img class="image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
                 <div class="media-body">
@@ -17,7 +19,7 @@
                 <p class = "post-text">Description: </p>
                 <p class="post-text">{{ post.content }}</p>
               </article>
-            {% endfor %}
+    {% endfor %}
 
             {% for page_num in page_num.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
       {% if page_num %}
@@ -30,4 +32,5 @@
         ...
       {% endif %}
     {% endfor %}
+    {% endif %}
         {% endblock content %}
