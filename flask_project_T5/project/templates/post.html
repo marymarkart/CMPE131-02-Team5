@@ -7,7 +7,7 @@
       <a class="medium-button" href="{{ url_for('user_posts', username=post.author.username) }}">{{ post.author.username }}</a>
       <small class="text" text>Posted: {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
     </div>
-    <img class="image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
+    <img class="post-image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}" height="192" width="192">
     <div class="field">
       <p class = "description">Description: </p>
       <p class="description-text">{{ post.content }}</p>
