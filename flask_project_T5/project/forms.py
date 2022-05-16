@@ -62,3 +62,8 @@ class PostForm(FlaskForm):
     item_price = StringField('Item Price $', validators=[DataRequired()])
     item_image = FileField('Item Image', validators=[FileAllowed(['jpg', 'png'])])
     submit = SubmitField('Post')
+
+
+class SearchForm(FlaskForm):
+	searched = StringField("Searched", validators=[DataRequired()])
+	submit = SubmitField("Submit")
