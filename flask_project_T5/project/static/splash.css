@@ -1,5 +1,11 @@
+body {
+    margin: 0;
+}
+
 h1 {
     text-align: center;
+    margin: 0;
+    padding: 12px 0 0 0;
 }
 
 .defaultnavbar {
@@ -83,7 +89,7 @@ h1 {
     text-align: center;
     position:relative;
     bottom:0;
-    margin-top:33%;
+    margin: auto;
     text-decoration: none;
     font-size: 20px;
     padding: 5px 16px;
@@ -119,13 +125,37 @@ h1 {
     transition-duration: 0.5s;
 }
 
+.form-group {
+    margin: 5px auto;
+}
+
 .image {
-    margin: 1px auto;
+    margin: auto;
+    padding: 5px 0;
     border-radius: 1px;
     text-align: center;
     text-decoration: none;
     display: block;
     transition-duration: 0.5s;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.post {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 250px;
+    height: 400px;
+    margin: 10px 20px;
+    padding: 40px 0;
+}
+
+.post a.button {
+    width: 100%;
+    outline: 0;
 }
 
 .post-text {
@@ -134,12 +164,11 @@ h1 {
     border-radius: 2px;
     text-align: left;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 18px;
     display: block;
     color: white;
     transition-duration: 0.5s;
 }
-
 
 .description{
     width: 100%;
@@ -173,7 +202,7 @@ h1 {
 
 .text {
     width: 10%;
-    margin: 2px auto;
+    margin: auto;
     border-radius: 2px;
     text-align: center;
     text-decoration: none;
@@ -188,13 +217,15 @@ h1 {
     color: #850029;
 }
 
-
-
-#welcome {
-    text-align: center;
-    color : white;
+.medium-button:hover {
+    background-color: white;
+    color: #850029;
 }
 
+.welcome {
+    text-align: center;
+    color : black;
+}
 
 .carousel{
         width: 100%;
@@ -202,7 +233,6 @@ h1 {
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-visibility: hidden;
         animation: slideBg 25s linear infinite 10s;
         animation-timing-function: ease-in-out;
         background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
@@ -225,20 +255,18 @@ h1 {
 @keyframes slideBg  {
 
         0%{
-                background-image : url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
+        background-image : url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?t=st=1651895759~exp=1651896359~hmac=ae1422250b5155907d5f154b1e9aee3ddc4b8ed2609f7c52e8f7a2e0764b9116&w=1480');
         }
 
-        25%
-        {
+        25%{
 		background-image : url('https://img.freepik.com/free-photo/black-marble-patterned-texture-background-marble-thailand-abstract-natural-marble-black-white-design_1253-917.jpg?t=st=1651896641~exp=1651897241~hmac=63064ec88cca865af37d65c9c168eb4956d42c33dfdae5e3626a5a4ac313e7d9&w=1060');
-	}
+	    }
+
         50%{
 		background-image : url('https://img.freepik.com/free-vector/memphis-blue-background-with-halftone-line-elements_1017-33622.jpg?t=st=1651896004~exp=1651896604~hmac=6b17fede4b21cb46424d332e62a8d95be95ae17ced71ae275c5d3ca10921dfe1&w=1800');
-
         }
 
-	75%
-        {
+	    75%{
 		background-image : url('https://img.freepik.com/free-vector/gradient-luxury-background_23-2148999255.jpg?t=st=1651896004~exp=1651896604~hmac=44b3fbef9d17b7109f719c96e2994341f3a90405c4199b99ecc54da93f1b9153&w=1480');
         }
 }
