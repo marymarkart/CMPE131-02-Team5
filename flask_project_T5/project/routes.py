@@ -107,7 +107,7 @@ def save_item_picture(form_item_image):
     i.thumbnail(output_size)
     i.save(picture_path)
 
-    return picture_fn
+    return item_image_fn
 
 
 @app.route("/account", methods=['GET', 'POST'])
@@ -122,7 +122,7 @@ def account():
         current_user.email = form.email.data
         db.session.commit()
         flash('Your account has been updated!', 'success')
-        return render_template('account.html')
+        return redirect(url_for('account'))
     elif request.method == 'GET':
         form.username.data = current_user.username
         form.email.data = current_user.email
@@ -157,10 +157,9 @@ def new_post():
     form = PostForm()
     if form.validate_on_submit():
         if form.item_image.data:
-            picture_file = save_item_picture(form.item_image.data)
-            current_user.image_file = picture_file
+            image_file = save_item_picture(form.item_image.data)
             db.session.commit()
-        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user)
+        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user, item_image=image_file)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
@@ -183,12 +182,15 @@ def update_post(post_id):
         abort(403)
     form = PostForm()
     if form.validate_on_submit():
+        if form.item_image.data:
+            image_file = save_item_picture(form.item_image.data)
+            post.item_image = image_file
         post.title = form.title.data
         post.content = form.content.data
         post.item_price = form.item_price.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
-        return render_template('post', post_id=post.id)
+        return redirect(url_for('post', post_id=post.id))
     elif request.method == 'GET':
         form.title.data = post.title
         form.content.data = post.content
