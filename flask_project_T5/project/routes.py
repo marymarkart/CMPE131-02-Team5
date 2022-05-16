@@ -89,9 +89,7 @@ def save_profile_picture(form_picture):
     picture_fn = random_hex + f_ext
     picture_path = os.path.join(app.root_path, 'static/profile_pics', picture_fn)
 
-    output_size = (125, 125)
     i = Image.open(form_picture)
-    i.thumbnail(output_size)
     i.save(picture_path)
 
     return picture_fn
@@ -102,9 +100,7 @@ def save_item_picture(form_item_image):
     item_image_fn = random_hex + f_ext
     picture_path = os.path.join(app.root_path, 'static/item_pics', item_image_fn)
 
-    output_size = (125, 125)
     i = Image.open(form_item_image)
-    i.thumbnail(output_size)
     i.save(picture_path)
 
     return item_image_fn
