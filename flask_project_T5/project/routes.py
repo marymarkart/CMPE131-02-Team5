@@ -159,7 +159,9 @@ def new_post():
         if form.item_image.data:
             image_file = save_item_picture(form.item_image.data)
             db.session.commit()
-        post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user, item_image=image_file)
+            post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user, item_image=image_file)
+        else:
+            post = Post(title=form.title.data, content=form.content.data, item_price=form.item_price.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
