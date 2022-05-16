@@ -156,7 +156,16 @@ h1 {
     margin: 5px auto;
 }
 
-.image {
+.profile-image {
+    margin: auto;
+    padding: 5px 0;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.post-image {
     margin: auto;
     padding: 5px 0;
     border-radius: 1px;
@@ -174,6 +183,7 @@ h1 {
 
 .post {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
     width: 250px;
     height: 400px;
     margin: 10px 20px;
@@ -193,7 +203,7 @@ h1 {
     text-decoration: none;
     font-size: 18px;
     display: block;
-    color: white;
+    color: black;
     transition-duration: 0.5s;
 }
 
