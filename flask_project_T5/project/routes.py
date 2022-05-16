@@ -25,13 +25,15 @@ def base():
 
 @app.route('/search', methods=["POST"])
 def search():
-	form = SearchForm()
-	posts = Post.query
-	if form.validate_on_submit():
-		post.searched = form.searched.data
-		posts = posts.filter(Post.content.like('%' + post.searched + '%'))
-		posts = posts.order_by(Post.title).all()
-		return render_template("search.html", form=form, searched=post.searched, posts = posts)
+    form = SearchForm()
+    page = request.args.get('page', 1, type=int)
+    page_num = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=5)
+    posts = Post.query
+    if form.validate_on_submit():
+        post.searched = form.searched.data
+        posts = posts.filter(Post.content.like('%' + post.searched + '%'))
+        posts = posts.order_by(Post.title).all()
+    return render_template("search.html", form=form, searched=post.searched, posts=posts, page_num=page_num)
 
 
 @app.route("/about")
