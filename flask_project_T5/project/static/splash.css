@@ -44,6 +44,33 @@ h1 {
     float: right;
 }
 
+.search-container {
+    float: left;
+    margin-top: 10.5px;
+}
+
+.search-container input[type=search] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+}
+
+.search-container button {
+    float: right;
+    padding: 6px 10px;
+    font-size: 17px;
+    margin-right: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ccc;
+}
+
 .usernavbar a.exit {
     color: #ff0000;
 }
