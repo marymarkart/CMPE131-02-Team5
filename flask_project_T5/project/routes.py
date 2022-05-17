@@ -35,7 +35,8 @@ def search():
         post.searched = form.searched.data
         posts = posts.filter(Post.content.like('%' + post.searched + '%'))
         posts = posts.order_by(Post.title).all()
-    return render_template("search.html", form=form, searched=post.searched, posts=posts, search_posts=search_posts)
+        return render_template("search.html", form=form, searched=post.searched, posts=posts, search_posts=search_posts)
+    return render_template("search.html")
 
 
 @app.route("/about")
@@ -213,15 +214,15 @@ def add_cart(post_id):
     cart_items.append(post_id)
     for i in cart_items:
         post = Post.query.get_or_404(i)
+        item_posts.append(post)
+    cart_items.clear()
     flash('Added Item to Cart!', 'success')
-    return render_template('cart.html', cart=cart_items, post=post)
+    return render_template('cart.html', cart=item_posts)
 
 @app.route("/cart")
 @login_required
 def cart():
-    for i in cart_items:
-        post = Post.query.get_or_404(i)
-    return render_template('cart.html', cart=cart_items, post=post)
+    return render_template('cart.html', cart=item_posts)
 
 
 @app.route("/user/<string:username>")
