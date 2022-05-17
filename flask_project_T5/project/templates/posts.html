@@ -2,6 +2,7 @@
 {% block content %}
 	<div class = "carousel">
         <div class="flex-container">
+            <h1 class="whiteHeader">Items</h1>
             {% for post in posts.items %}
             <article class="post">
               <a href="{{ url_for('user_posts', username=post.author.username) }}">
