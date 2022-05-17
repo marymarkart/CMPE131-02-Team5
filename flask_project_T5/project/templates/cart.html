@@ -3,30 +3,30 @@
 <div class="carousel">
     <h1 class="whiteHeader">My Cart</h1>
     <div class="flex-container">
-    {% for item in cart%}
-    <article class="post">
-      <a href="{{ url_for('user_posts', username=item.author.username) }}">
-        <img class="profile-image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + item.author.image_file) }}">
-      </a>
-        <div class="media-body">
-            <div class="article-metadata">
-                <a class="medium-button" href="{{ url_for('user_posts', username=item.author.username) }}">{{ item.author.username }}</a>
-                <small class="post-text">{{ item.date_posted.strftime('%Y-%m-%d') }}</small>
+        {% for item in cart%}
+        <article class="post">
+            <a href="{{ url_for('user_posts', username=item.author.username) }}">
+                <img class="profile-image" height="96" width="96" src="{{ url_for('static', filename='profile_pics/' + item.author.image_file) }}">
+            </a>
+            <div class="media-body">
+                <div class="article-metadata">
+                    <a class="medium-button" href="{{ url_for('user_posts', username=item.author.username) }}">{{ item.author.username }}</a>
+                    <small class="post-text">{{ item.date_posted.strftime('%Y-%m-%d') }}</small>
+                </div>
+                <h2><a class="button" href="{{ url_for('post', post_id=item.id) }}">{{ item.title }}</a></h2>
             </div>
-            <h2><a class="button" href="{{ url_for('post', post_id=item.id) }}">{{ item.title }}</a></h2>
-        </div>
-        <p class="post-text">Description: </p>
-        <p class="post-text">{{ item.content }}</p>
-        <p class="post-text">${{ item.item_price }}</p>
-        <img class="post-image" src="{{ url_for('static', filename='item_pics/' + item.item_image)}}" style="width:100px; height:100px;">
-    </article>
-    {% endfor %}
+            <p class="post-text">Description: </p>
+            <p class="post-text">{{ item.content }}</p>
+            <p class="post-text">${{ item.item_price }}</p>
+            <img class="post-image" src="{{ url_for('static', filename='item_pics/' + item.item_image)}}" style="width:100px; height:100px;">
+        </article>
+        {% endfor %}
+
+    </div>
     <div>
         <a class="button" href="{{ url_for('checkout') }}">Checkout</a>
 
     </div>
-
-</div>
 
 </div>
 {% endblock content %}
