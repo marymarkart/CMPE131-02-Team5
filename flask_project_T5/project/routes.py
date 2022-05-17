@@ -1,4 +1,5 @@
 from email.mime import image
+from genericpath import exists
 import os
 import secrets
 from PIL import Image
@@ -34,17 +35,13 @@ def search():
         post.searched = form.searched.data
         posts = posts.filter(Post.content.like('%' + post.searched + '%'))
         posts = posts.order_by(Post.title).all()
-    return render_template("search.html", form=form, searched=post.searched, posts=posts, search_posts=search_posts)
+        return render_template("search.html", form=form, searched=post.searched, posts=posts, search_posts=search_posts)
+    return render_template("search.html")
 
 
 @app.route("/about")
 def about():
     return render_template('about.html', title='About')
-
-@app.route("/cart")
-@login_required
-def cart():
-    return render_template('cart.html', title='Cart')
 
 
 @app.route("/signup", methods=['GET', 'POST'])
@@ -209,13 +206,23 @@ def delete_post(post_id):
     flash('Your post has been deleted!', 'success')
     return render_template('home.html')
 
+cart_items = []
+item_posts = []
 @app.route("/post/<int:post_id>/add-to-cart", methods=['POST'])
 @login_required
 def add_cart(post_id):
-
-
+    cart_items.append(post_id)
+    for i in cart_items:
+        post = Post.query.get_or_404(i)
+        item_posts.append(post)
+    cart_items.clear()
     flash('Added Item to Cart!', 'success')
-    return render_template('cart.html')
+    return render_template('cart.html', cart=item_posts)
+
+@app.route("/cart")
+@login_required
+def cart():
+    return render_template('cart.html', cart=item_posts)
 
 
 @app.route("/user/<string:username>")
