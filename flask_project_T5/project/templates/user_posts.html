@@ -13,6 +13,7 @@
           <h2><a class="button" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
           <p class="post-text">Description: </p>
           <p class="post-text">{{ post.content }}</p>
+          <img class="user-post-image" src="{{ url_for('static', filename='item_pics/' + post.item_image)}}">
         </div>
       </article>
       {% endfor %}
