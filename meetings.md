@@ -84,3 +84,23 @@
   - Rishi : Made changes to splash.css and some optimizations
 
 - All members got together to discuss how to style certain parts of the website and the account delete feature
+
+### 2022-05-15 at 20:30
+- Kevin, Faith, Adrien, Rishi
+- Team updates
+  - Kevin: Continued to work on CSS.
+  - Faith: Helped Adrien on fixing the updated item image.
+  - Adrien: Fixed update item image feature and worked on search bar.
+  - Rishi : Worked on Add to Cart and Checkout.
+
+- All members got together to discuss what was finished that day and what needs to be done
+
+### 2022-05-16 at 21:30
+- Kevin, Faith, Adrien, Rishi
+- Team updates
+  - Kevin: Finished on working on CSS features.
+  - Faith: Worked on CSS on user posts and updated gantt file and meetings file.
+  - Adrien: Finished Add to Cart and Checkout.
+  - Rishi : Finished Add to Cart and Checkout.
+
+- We met together for last minute touch ups on the project.
