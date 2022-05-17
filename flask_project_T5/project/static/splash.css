@@ -190,6 +190,15 @@ h1 {
     margin: 10px 20px;
 }
 
+.user-post{
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    width: 200px;
+    height: 400px;
+    margin: 10px 20px;
+}
+
 .post a.button {
     width: 100%;
     outline: 0;
