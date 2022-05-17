@@ -1,6 +1,22 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="carousel">
-        <h1 class = "whiteHeader">My Cart</h1>
+<div class="carousel">
+    <h1 class="whiteHeader">My Cart</h1>
+    <div class="flex-container">
     </div>
+    {% for items in cart %}
+    <article class="post">
+        <div class="media-body">
+            <div class="article-metadata">
+            </div>
+            <h2><a class="button" href="{{ url_for('post', post_id=items) }}">{{ post.title }}</a></h2>
+        </div>
+        <p class="post-text">Description: </p>
+        <p class="post-text">{{ post.content }}</p>
+    </article>
+    {% endfor %}
+</div>
+</div>
+
+</div>
 {% endblock content %}
