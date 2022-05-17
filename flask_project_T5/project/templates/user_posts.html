@@ -18,15 +18,17 @@
       </article>
       {% endfor %}
     </div>
-    {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
-      {% if page_num %}
+    <div class="flex-container">
+        {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+        {% if page_num %}
         {% if posts.page == page_num %}
-          <a class="small-button" href="{{ url_for('user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
+        <a class="small-button" href="{{ url_for('user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
         {% else %}
-          <a class="small-button" href="{{ url_for('user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
+        <a class="small-button" href="{{ url_for('user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a>
         {% endif %}
-      {% else %}
+        {% else %}
         ...
-      {% endif %}
-    {% endfor %}
+        {% endif %}
+        {% endfor %}
+    </div>
 {% endblock content %}
