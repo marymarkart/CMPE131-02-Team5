@@ -24,12 +24,20 @@ List the ready features here:
 - Update Description of Post
 - Update User Information
 - Update Profile Image
+- Search Items Bar
+- Add to Cart
+- Checkout
 
 ## Screenshots
 ### Gantt Chart
-![image](https://user-images.githubusercontent.com/50222631/167236694-7def0c1d-29e5-4e09-85fb-2c226732aef9.png)
-### Website Items Page
+<img width="828" alt="image" src="https://user-images.githubusercontent.com/50222631/168740611-934e9208-cafb-4bcf-aa1e-ca84b5a46f5e.png">
+
+### Website Items Page (Before)
 <img width="1263" alt="image" src="https://user-images.githubusercontent.com/50222631/167240901-989c25c5-b2c1-49ef-8528-97bee9ea4ca0.png">
+
+### Website Items Page (After)
+<img width="1245" alt="image" src="https://user-images.githubusercontent.com/50222631/168742923-d325ea65-a54b-4e87-b32f-7ef156a0dd53.png">
+
 
 	
 ## Technologies
@@ -62,16 +70,16 @@ $ python3 run.py
 
 ## Team-Five-Participants
 -Adrien Carrou (@acarrou)
-* Worked on login, and create/delete account feature.
+* Worked on login, create/delete account, item post images, and search engine feature.
 
 
 -Kevin Campbell (@Zariphron)
-* Worked on splash page, and add Item feature. <br/>
+* Worked on splash page, add Item feature, and css styling. <br/>
 
 
 -Rishi Jagtap (@RishiJ12)
-* Worked on Splash Page <br/>
+* Worked on Splash Page, checkout, cart, and payment system <br/>
 
 
 -Faith Deanon (@afdeanon)
-* Worked on login, logout, CSS and layout of the website(home, posts, user page)
+* Worked on login, logout, CSS, item images and layout of the website(home, posts, user page)
