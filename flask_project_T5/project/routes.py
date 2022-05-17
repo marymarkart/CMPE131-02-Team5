@@ -225,6 +225,15 @@ def cart():
     return render_template('cart.html', cart=item_posts)
 
 
+@app.route("/checkout")
+@login_required
+def checkout():
+    full_price = 0
+    for i in item_posts:
+        full_price = i.item_price + full_price
+    return render_template('checkout.html', full_price=full_price)
+
+
 @app.route("/user/<string:username>")
 def user_posts(username):
     page = request.args.get('page', 1, type=int)

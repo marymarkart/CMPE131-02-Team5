@@ -21,6 +21,11 @@
         <img class="post-image" src="{{ url_for('static', filename='item_pics/' + item.item_image)}}" style="width:100px; height:100px;">
     </article>
     {% endfor %}
+    <div>
+        <a class="button" href="{{ url_for('checkout') }}">Checkout</a>
+
+    </div>
+
 </div>
 
 </div>
