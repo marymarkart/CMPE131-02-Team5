@@ -8,7 +8,7 @@ from project import app, db, bcrypt
 from project.forms import (RegistrationForm, LoginForm, UpdateAccountForm, PostForm, SearchForm)
 from project.models import User, Post
 from flask_login import login_user, current_user, logout_user, login_required
-
+import stripe
 
 @app.route("/")
 def home():
@@ -224,6 +224,9 @@ def add_cart(post_id):
 def cart():
     return render_template('cart.html', cart=item_posts)
 
+app.config['STRIPE_PUBLIC_KEY'] = 'pk_test_51KzDsRGP6AuS3BWDr9gBCQZ9Blv0eE9hEbhS0RiY6OyDu7Z1MCvYIFNX4oM9YPat8lmNOsXVsRZYB2LYMy9SJfGg00SoiNXlHN'
+app.config['STRIPE_SECRET_KEY'] = 'sk_test_51KzDsRGP6AuS3BWDpzvoLfbWZ6sBDqxbQhrZutddiiYkCHFcVPEZ3jQLjTrNnNbMAJn5H3qRYGd7WlTwlkHu6wl500sNhDnpZH'
+stripe.api_key = app.config['STRIPE_SECRET_KEY']
 
 @app.route("/checkout")
 @login_required
@@ -232,6 +235,81 @@ def checkout():
     for i in item_posts:
         full_price = i.item_price + full_price
     return render_template('checkout.html', full_price=full_price)
+
+@app.route('/stripe_pay')
+@login_required
+def stripe_pay():
+    full_price = 0
+    for i in item_posts:
+        full_price = i.item_price + full_price
+        session_price = full_price * 100
+        checkout_price = int(session_price)
+    session = stripe.checkout.Session.create(
+        payment_method_types=['card'],
+        line_items=[{
+            'price_data': {
+                'currency': 'usd',
+                'unit_amount': checkout_price,
+                'product_data': {
+                    'name': 'Your Total Is',
+                    'description': 'Have A Great Day!',
+                    },
+            },
+            'adjustable_quantity': {
+                'enabled': True,
+                'minimum': 1,
+                'maximum': 10,
+                },
+            'quantity' : 1,
+            }],
+        mode='payment',
+        success_url=url_for('thanks', _external=True) + '?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url=url_for('checkout', _external=True),
+    )
+    return {
+        'checkout_session_id': session['id'],
+        'checkout_public_key': app.config['STRIPE_PUBLIC_KEY']
+    }
+
+@app.route('/thanks')
+@login_required
+def thanks():
+    return render_template('thanks.html')
+
+@app.route('/stripe_webhook', methods=['POST'])
+@login_required
+def stripe_webhook():
+    print('WEBHOOK CALLED')
+
+    if request.content_length > 1024 * 1024:
+        print('REQUEST TOO BIG')
+        abort(400)
+    payload = request.get_data()
+    sig_header = request.environ.get('HTTP_STRIPE_SIGNATURE')
+    endpoint_secret = 'whsec_c6ada773f8b6ca0ff6a062047aa205496db85ed1f70edc2c2762a1208e562948'
+    event = None
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, endpoint_secret
+        )
+    except ValueError as e:
+        # Invalid payload
+        print('INVALID PAYLOAD')
+        return {}, 400
+    except stripe.error.SignatureVerificationError as e:
+        # Invalid signature
+        print('INVALID SIGNATURE')
+        return {}, 400
+
+    # Handle the checkout.session.completed event
+    if event['type'] == 'checkout.session.completed':
+        session = event['data']['object']
+        print(session)
+        line_items = stripe.checkout.Session.list_line_items(session['id'], limit=1)
+        print(line_items['data'][0]['description'])
+
+    return {}
 
 
 @app.route("/user/<string:username>")

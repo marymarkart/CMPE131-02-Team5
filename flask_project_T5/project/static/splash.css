@@ -192,6 +192,15 @@ h1 {
     justify-content: center;
 }
 
+.checkout-container {
+    background-color: #ccc;
+    border-radius: 10px;
+    max-width: 500px;
+    padding: 40px 100px;
+    margin: auto;
+    text-align: center;
+}
+
 .post {
     padding: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
