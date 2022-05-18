@@ -224,6 +224,15 @@ def add_cart(post_id):
 def cart():
     return render_template('cart.html', cart=item_posts)
 
+@app.route("/cart/delete/<int:post_id>", methods=['GET','POST'])
+@login_required
+def delete_cart_item(post_id):
+    for i in item_posts:
+        if i.id == post_id:
+            item_posts.remove(i)
+    return render_template('cart.html', cart=item_posts)
+
+
 app.config['STRIPE_PUBLIC_KEY'] = 'pk_test_51KzDsRGP6AuS3BWDr9gBCQZ9Blv0eE9hEbhS0RiY6OyDu7Z1MCvYIFNX4oM9YPat8lmNOsXVsRZYB2LYMy9SJfGg00SoiNXlHN'
 app.config['STRIPE_SECRET_KEY'] = 'sk_test_51KzDsRGP6AuS3BWDpzvoLfbWZ6sBDqxbQhrZutddiiYkCHFcVPEZ3jQLjTrNnNbMAJn5H3qRYGd7WlTwlkHu6wl500sNhDnpZH'
 stripe.api_key = app.config['STRIPE_SECRET_KEY']

@@ -19,6 +19,7 @@
             <p class="post-text">{{ item.content }}</p>
             <p class="post-text">${{ item.item_price }}</p>
             <img class="post-image" src="{{ url_for('static', filename='item_pics/' + item.item_image)}}" style="width:100px; height:100px;">
+            <a class="button" href="{{ url_for('delete_cart_item', post_id=item.id) }}">Remove Item</a>
         </article>
         {% endfor %}
 
