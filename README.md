@@ -27,6 +27,7 @@ List the ready features here:
 - Search Items Bar
 - Add to Cart
 - Checkout
+- Payment Method
 
 ## Screenshots
 ### Gantt Chart
