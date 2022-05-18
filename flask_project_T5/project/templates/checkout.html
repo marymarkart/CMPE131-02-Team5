@@ -1,58 +1,27 @@
 <!DOCTYPE html>
 {% extends "layout.html" %}
 {% block content %}
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Store</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{ url_for('static', filename='narrow-jumbotron.css') }}" rel="stylesheet">
-  </head>
-
-  <body>
-	  <div class="carousel">
+<div class="carousel">
     <h1 class="whiteHeader">Checkout</h1>
-    <div class="flex-container">
-    <p class="text">Total Balance: ${{ full_price }}</p>
-	</div>
-	</div>
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link active" href="{{ url_for('home') }}">Home</a>
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">Pay here</h3>
-      </div>
+    <div class="checkout-container">
+        <div class="header clearfix">
+            <h3 class="text-muted">Pay here</h3>
+        </div>
 
-      <div class="jumbotron">
-	<p class="lead">Purchase for ${{full_price }}.</p>
-        <a href="#" id="buy_now_btn" class="btn btn-primary">Buy Now</a>
-      </div>
-
-      <footer class="footer">
-      </footer>
-      <script src="https://js.stripe.com/v3/"></script>
-      {#
-      <script>
+        <div class="jumbotron">
+            <p class="lead">Purchase for ${{full_price }}.</p>
+            <a href="#" id="buy_now_btn" class="button">Buy Now</a>
+        </div>
+        <script src="https://js.stripe.com/v3/"></script>
+        {#
+        <script>
         const checkout_public_key = '{{checkout_public_key}}';
         const checkout_session_id = '{{checkout_session_id}}';
-      </script>
-      #}
-      <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
+        </script>
+        #}
+        <script src="{{ url_for('static', filename='script-ajax.js') }}"></script>
 
     </div> <!-- /container -->
-  </body>
-</html>
+</div>
+    
 {% endblock content %}
