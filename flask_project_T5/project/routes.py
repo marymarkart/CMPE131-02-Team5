@@ -243,12 +243,13 @@ def stripe_pay():
     for i in item_posts:
         full_price = i.item_price + full_price
         session_price = full_price * 100
+        checkout_price = int(session_price)
     session = stripe.checkout.Session.create(
         payment_method_types=['card'],
         line_items=[{
             'price_data': {
                 'currency': 'usd',
-                'unit_amount': 10000,
+                'unit_amount': checkout_price,
                 'product_data': {
                     'name': 'Your Total Is',
                     'description': 'Have A Great Day!',
