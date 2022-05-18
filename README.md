@@ -50,6 +50,7 @@ Project is created with:
 * Python
 * HTML
 * CSS
+* Stripe
 	
 ## Setup
 To run this project, install the dependencies using pip:
