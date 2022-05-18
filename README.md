@@ -3,6 +3,7 @@
 * [General info](#general-info)
 * [Features](#features)
 * [Screenshots](#screenshots)
+* [Checkout and Payment Demo](#checkout-and-payment-demo)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Run](#run-the-app)
@@ -39,8 +40,10 @@ List the ready features here:
 ### Website Items Page (After)
 <img width="1245" alt="image" src="https://user-images.githubusercontent.com/50222631/168742923-d325ea65-a54b-4e87-b32f-7ef156a0dd53.png">
 
+## Checkout and Payment Demo
+![Website](https://user-images.githubusercontent.com/50222631/168974906-33f05bea-e3cd-4b2f-a7d0-13fc8541ab35.gif)
 
-	
+
 ## Technologies
 Project is created with:
 * Flask
