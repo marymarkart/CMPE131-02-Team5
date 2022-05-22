@@ -22,72 +22,7 @@
 
 ## Use Cases
 
-1. Login 
-- **Pre-condition:** User needs to have an existing account in the database
-
-- **Trigger:** User clicks on the Login Button on the navbar
-
-- **Primary Sequence:**
-  1. User clicks on Login on the navbar
-  2. User enters email and password to login their account
-
-- **Primary Postconditions:** User is logged into their account has access to the logged in features
-
-- **Alternate Sequence:** 
-  1. User tries to login
-  2. Website tells user they dont have an account or entered wrong
-
-2. Logout
-- **Pre-condition:** User needs to be logged into an account
-
-- **Trigger:** User clicks on logout on the navbar
-
-- **Primary Sequence:**
-  1. User clicks on logout on the top right button of the navbar
-
-- **Primary Postconditions:** User is logged out of their account and dont have access to their profile or cart
-
-- **Alternate Sequence:** 
-  1. User clicks on the logout button on the navbar
-  2. User is logged out of their account and does not have access to profile or cart
-
-
-3. Create new account
-- **Pre-condition:** User does not need preconditions
-
-- **Trigger:** User clicks on the SignUp button on the navbar
-
-- **Primary Sequence:**
-  1. User clicks on the SignUp button
-  2. User needs to enter username
-  3. User needs to enter email address
-  4. User needs to enter a password
-  5. User needs to re-enter a password
-
-- **Primary Postconditions:** Users information is sored into the database and is redirected to the login page where they can enter their account 
-
-- **Alternate Sequence:** 
-  1. User clicks on SignUp
-  2. User leaves the account name empty
-  3. The website tells the user to enter a field
-
-- **Alternate Sequence:** 
-  1. User clicks on SignUp
-  2. User tries to use a username already taken by another user
-  3. The website tells the user to enter a different username because it's been taken
-
-4. Delete account
-- **Pre-condition:** The user has an account
-
-- **Trigger:** User clicks on Delete Account button in Account
-
-- **Primary Sequence:**
-  1. User clicks on the Account Button on the navbar
-  2. User clicks on the Delete Account Button on the bottom of the account information
-
-- **Primary Postconditions:** The users posts are found in the database and all deleted. Finally the users information is deleted from the database
-
-5. Add to cart
+1. Add to cart
 - **Pre-condition:** Item exists and is on the items page.
 
 - **Trigger:** User clicks on the items post and clicks on the "add to cart" button. 
@@ -105,7 +40,7 @@
   3. Does not add anything to cart
   4. Returns to item page
 
-6. Search item
+2. Search item
 - **Pre-Condition:** Item post exists in the store.
   
 - **Trigger:** User enters the items name in the search bar and clicks the search button.
@@ -124,28 +59,7 @@
   1. Searches the database for item but returns nothing
   2. Displays a screen saying the item the user searched for doesn't exist
 
-7. Splash Page 
-- **Pre-condition:** User does not need an account to view splashpage
-
-- **Trigger:** Clicks on any button on the navbar to view the different pages
-
-- **Primary Sequence:**
-  1. User clicks on the website home page to view home
-  2. User clicks on the About button to view the About page
-  3. User clicks on the Items button to view the item posts
-
-- **Primary Postconditions:** User is navigated to the splash page of the button clicked
-
-- **Alternate Sequence:** 
-  1. User clicks on Reebay button to be greeted to the website
-
-- **Alternate Sequence:** 
-  1. User clicks on About button to get information about the Reebay Website
-
-- **Alternate Sequence:**
-  1. User clicks on Items button to view all items posted by other users
-  
-8. User Profiles
+3. User Profiles
 - **Pre-Condition:** User is logged in
   
 - **Trigger:** User clicks on "Account on the navbar
@@ -162,7 +76,7 @@
   2. User clicks on sellers profile picture or profile name
   3. User is redirected to sellers profile to view all their posts
 
-9. Buy items
+4. Buy items
 - **Pre-Condition:** User has a profile and items exist in shopping cart.
   
 - **Trigger:** User clicks on "Checkout" and clicks on "Buy Now.
@@ -182,26 +96,7 @@
   1. Card gets declined from stripe
   2. Asks user to entire a valid credit card
 
-10. Add Pictures for Items 
-- **Pre-condition:** User needs to have an account and be logged in
-
-- **Trigger:** User clicks on the sell button and is able to upload an image
-
-- **Primary Sequence:**
-  1. User is logged into their account
-  2. User clicks on the sell button
-  3. User uploads an image to the post
-  4. User posts the item clicking the post button
-
-- **Primary Postconditions:** The users item is posted with the picture and information on a card for the Items page.
-
-- **Alternate Sequence:** 
-  1. User forgets to upload an image
-  2. The post is still uploaded and uses the default image
-  3. The user goes to their post on the Items page and clicks on update
-  4. The user uplaods an image to the post and clicks on update to update the post.
-  
-11. Items Page
+5. Items Page
 - **Pre-Condition:** Items exist and are in stock in the database.
   
 - **Trigger:** User clicks the "View all" button.
@@ -216,10 +111,9 @@
 - **Alternate Sequence:** 
   
   1. Nothing is in the database
-
   2. Displays a message saying nothing is currently listed
 
-12. Post Items to Store
+6. Post Items to Store
 - **Pre-Condition:** User has a profile and is logged in
   
 - **Trigger:** Clicks the "post new item" button.
